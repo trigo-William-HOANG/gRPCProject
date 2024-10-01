@@ -1,0 +1,19 @@
+// proto/hello.proto
+syntax = "proto3";
+
+package hello;
+
+// Add this line to specify the Go package path
+option go_package = "github.com/trigo-William-HOANG/gRPCProject/proto;proto";
+
+service HelloService {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
